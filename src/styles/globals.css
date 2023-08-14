@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,4 +25,143 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+/* navbar */
+.main-nav{
+  @apply absolute w-full flex justify-between flex-row items-center pl-10 pr-10 h-64 text-3xl border-b-navbar whitespace-nowrap; 
+}
+
+.navbar-items-color{
+  @apply text-navbar-color;
+}
+
+.navbar-items{
+  @apply flex flex-row gap-4 justify-center items-center;
+}
+
+.home-text{
+  @apply font-bold text-4xl;
+}
+
+/* background */
+.main-background{
+  @apply bg-gradient-radial w-screen h-screen;
+}
+
+.main-image{
+  @apply bg-my-image absolute w-screen h-screen overflow-hidden;
+}
+
+/* lines */
+.main-lines{
+  @apply fill-[#d9d9d9];
+}
+
+.lines-left ,
+.lines-left > *,
+.lines-right, 
+.lines-right > * {
+  @apply absolute
+}
+
+.lines-left1, 
+.lines-left2,
+.lines-right1,
+.lines-right2{
+  @apply main-lines;
+}
+
+.lines-left,
+.lines-right{
+  @apply overflow-hidden w-full h-full mix-blend-multiply
+
+}
+
+.lines-right1{
+  @apply top-[388px] left-[1442px]
+}
+
+.lines-right2{
+  @apply top-[469px] left-[1582px]
+}
+
+
+/* body */
+
+.main-body-text{
+  @apply text-[#DDEFFF] font-[Inter] text-[25px] not-italic font-semibold whitespace-nowrap
+}
+
+.main-body{
+  @apply  relative flex flex-row justify-center top-[225px] gap-[77px] main-body-text
+}
+
+.sidemenu{
+  @apply w-fit h-fit inline-flex justify-center items-start
+}
+
+.arrow{
+  @apply border border-red-50
+}
+
+.sidemenu-selection{
+  @apply flex flex-col items-start gap-1 w-full
+}
+
+.sidemenu-selection > *{
+  @apply flex self-stretch items-center gap-6 
+}
+
+.sidemenu-box{
+  @apply w-50 h-50
+}
+
+.sidemenu-selection-items{
+  @apply flex flex-row justify-start items-center w-full gap-5
+}
+
+.sidemenu-selection-text{
+  @apply w-full text-center
+}
+
+/* side features */
+
+.side-features{
+  @apply  w-fit h-fit
+}
+
+.side-features-items{
+  @apply flex
+}
+
+
+/* center content */
+
+.center-content{
+  @apply w-[717px] h-[688px] flex flex-col gap-[121px] whitespace-normal
+}
+
+.center-content-title{
+  @apply text-[#E4E4E4] text-center text-[Inter] text-[61px] font-normal
+}
+
+.center-content-text-blue{
+  @apply text-[#89C0F2] font-extrabold
+}
+
+.center-content-text{
+  @apply whitespace-normal font-[Inter] text-[20px]
+}
+
+.center-content-buttons{
+  @apply font-[Inter] font-bold flex flex-row justify-center gap-[10px]
+}
+
+.center-content-buttons-try{
+  @apply bg-[#26639A] px-[25px] rounded-[10px]
+}
+
+.center-content-buttons-learn{
+  @apply text-[#26639A] bg-[#F2F2F2] px-[25px] rounded-[10px]
 }
