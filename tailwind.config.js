@@ -41,7 +41,11 @@ module.exports = {
         "navbar" : "1px"
       },
       
-      
+      screens:{
+
+        'md' : '641px',
+        'lg' : '1008px'
+      }
      
     },
   },

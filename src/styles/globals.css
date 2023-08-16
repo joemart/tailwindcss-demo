@@ -32,21 +32,35 @@ body {
   @apply absolute w-full flex justify-between flex-row items-center pl-10 pr-10 h-64 text-3xl border-b-navbar whitespace-nowrap; 
 }
 
+.home-text{
+  @apply font-bold text-4xl ;
+}
+
 .navbar-items-color{
   @apply text-navbar-color;
 }
 
 .navbar-items{
-  @apply flex flex-row gap-4 justify-center items-center;
+  @apply md:flex-row md:gap-4 md:justify-center md:items-center md:flex ;
 }
 
-.home-text{
-  @apply font-bold text-4xl;
+.navbar-items-container{
+  @apply max-md:bg-[#274C6D] max-md:absolute max-md:right-0 max-md:top-[65px] z-[2]
 }
+
+.navbar-items-mobile{
+  @apply max-md:w-[213px] max-md:flex max-md:flex-col max-md:gap-[30px] p-[10px] justify-center 
+}
+
+.navbar-burger{
+  @apply hover:cursor-pointer md:hidden
+}
+
+
 
 /* background */
 .main-background{
-  @apply bg-gradient-radial w-screen h-screen;
+  @apply bg-gradient-radial w-screen h-screen ;
 }
 
 .main-image{
@@ -89,12 +103,12 @@ body {
 
 /* body */
 
-.main-body-text{
-  @apply text-[#DDEFFF] font-[Inter] text-[25px] not-italic font-semibold whitespace-nowrap
+.main-body{
+  @apply relative flex flex-row justify-between top-[225px] main-body-text h-[700px] mx-auto 
 }
 
-.main-body{
-  @apply  relative flex flex-row justify-center top-[225px] gap-[77px] main-body-text
+.main-body-text{
+  @apply text-[#DDEFFF] font-[Inter] text-[25px] not-italic font-semibold whitespace-nowrap
 }
 
 .sidemenu{
@@ -139,11 +153,11 @@ body {
 /* center content */
 
 .center-content{
-  @apply w-[717px] h-[688px] flex flex-col gap-[121px] whitespace-normal
+  @apply w-min h-full flex flex-col whitespace-normal justify-between items-center
 }
 
 .center-content-title{
-  @apply text-[#E4E4E4] text-center text-[Inter] text-[61px] font-normal
+  @apply text-[#E4E4E4] text-center font-[Inter] text-[61px] font-normal w-[697px]
 }
 
 .center-content-text-blue{
@@ -152,6 +166,14 @@ body {
 
 .center-content-text{
   @apply whitespace-normal font-[Inter] text-[20px]
+}
+
+.center-content-text-container{
+  @apply flex flex-col justify-between h-[475px]
+}
+
+.center-content-container{
+  @apply flex flex-col justify-between h-full
 }
 
 .center-content-buttons{
@@ -164,4 +186,8 @@ body {
 
 .center-content-buttons-learn{
   @apply text-[#26639A] bg-[#F2F2F2] px-[25px] rounded-[10px]
+}
+
+.center-content-arrow{
+  @apply flex justify-center
 }
