@@ -45,7 +45,8 @@ module.exports = {
 
         'md' : '641px',
         'lg' : '1008px'
-      }
+      },
+      
      
     },
   },

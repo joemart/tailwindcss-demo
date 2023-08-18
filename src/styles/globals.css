@@ -29,7 +29,7 @@ body {
 
 /* navbar */
 .main-nav{
-  @apply absolute w-full flex justify-between flex-row items-center pl-10 pr-10 h-64 text-3xl border-b-navbar whitespace-nowrap; 
+  @apply absolute w-full flex justify-between flex-row items-center pl-10 pr-10 h-64 text-3xl border-b-navbar whitespace-nowrap z-[1]; 
 }
 
 .home-text{
@@ -45,7 +45,7 @@ body {
 }
 
 .navbar-items-container{
-  @apply max-md:bg-[#274C6D] max-md:absolute max-md:right-0 max-md:top-[65px] z-[2]
+  @apply max-md:bg-[#274C6D] max-md:fixed max-md:right-0 max-md:top-[65px] z-[1]
 }
 
 .navbar-items-mobile{
@@ -93,18 +93,18 @@ body {
 }
 
 .lines-right1{
-  @apply top-[388px] left-[1442px]
+  @apply top-[388px] right-[0]
 }
 
 .lines-right2{
-  @apply top-[469px] left-[1582px]
+  @apply top-[469px] right-[0] 
 }
 
 
 /* body */
 
 .main-body{
-  @apply relative flex flex-row justify-between top-[225px] main-body-text h-[700px] mx-auto 
+  @apply relative flex flex-row justify-between top-[225px] main-body-text  mx-auto md:h-[700px] max-md:flex-col max-md:justify-center max-md:items-center max-md:box-border max-md:px-[70px] max-md:top-[100px]
 }
 
 .main-body-text{
@@ -112,7 +112,7 @@ body {
 }
 
 .sidemenu{
-  @apply w-fit h-fit inline-flex justify-center items-start
+  @apply w-fit h-fit inline-flex justify-center items-start fixed top-[64px] z-[1] max-md:w-[68px]
 }
 
 .arrow{
@@ -127,6 +127,14 @@ body {
   @apply flex self-stretch items-center gap-6 
 }
 
+.sidemenu-selection svg {
+  @apply max-md:w-[25px] max-md:h-[25px]
+}
+
+.sidemenu-selection-arrow{
+  @apply max-md:w-[30px] max-md:h-[28px]
+}
+
 .sidemenu-box{
   @apply w-50 h-50
 }
@@ -136,13 +144,13 @@ body {
 }
 
 .sidemenu-selection-text{
-  @apply w-full text-center
+  @apply w-full text-center max-md:hidden
 }
 
 /* side features */
 
 .side-features{
-  @apply  w-fit h-fit
+  @apply  h-fit max-md:absolute max-md:shadow-[inset_19px_19px_22px_0px_rgba(0,0,0,0.25)] max-md:bg-[#89C0F2] max-md:bottom-[0] max-md:flex max-md:w-[100%] max-md:flex-col max-md:justify-center max-md:items-center
 }
 
 .side-features-items{
@@ -153,11 +161,11 @@ body {
 /* center content */
 
 .center-content{
-  @apply w-min h-full flex flex-col whitespace-normal justify-between items-center
+  @apply h-full flex flex-col whitespace-normal justify-between items-center max-md:h-[688px]
 }
 
 .center-content-title{
-  @apply text-[#E4E4E4] text-center font-[Inter] text-[61px] font-normal w-[697px]
+  @apply text-[#E4E4E4] text-center font-[Inter] text-[61px] font-normal max-md:text-[40px] max-md:w-[289px]
 }
 
 .center-content-text-blue{
@@ -165,11 +173,11 @@ body {
 }
 
 .center-content-text{
-  @apply whitespace-normal font-[Inter] text-[20px]
+  @apply whitespace-normal font-[Inter] text-[20px] max-md:text-[16px] max-md:text-center max-md:leading-[120%]
 }
 
 .center-content-text-container{
-  @apply flex flex-col justify-between h-[475px]
+  @apply flex flex-col justify-between h-[475px] items-center
 }
 
 .center-content-container{
@@ -178,6 +186,14 @@ body {
 
 .center-content-buttons{
   @apply font-[Inter] font-bold flex flex-row justify-center gap-[10px]
+}
+
+.center-content-buttons a{
+  @apply flex justify-center items-center gap-[10px] 
+}
+
+.center-content-buttons div{
+  @apply whitespace-nowrap text-[20px] h-[40px] flex justify-center items-center
 }
 
 .center-content-buttons-try{
