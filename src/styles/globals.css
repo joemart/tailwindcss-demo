@@ -111,11 +111,23 @@ body {
   @apply text-[#DDEFFF] font-[Inter] text-[25px] not-italic font-semibold whitespace-nowrap
 }
 
+/* sidemenu
+ */
 .sidemenu{
-  @apply w-fit h-fit inline-flex justify-center items-start fixed top-[64px] z-[1] max-md:w-[68px]
+  @apply w-fit h-fit flex justify-center items-start fixed top-[64px] z-[1] max-md:w-[68px]
 }
 
-.arrow{
+.sidemenu-section{
+  @apply flex flex-row items-center gap-[26px] text-[#DDEFFF] h-[65px] font-[Inter] text-[31px] font-semibold justify-between focus-visible:outline-none
+}
+
+.sidemenu-section-icon{
+  @apply w-[50px] h-[50px] flex justify-center items-center
+}
+
+
+
+/* .arrow{
   @apply border border-red-50
 }
 
@@ -136,7 +148,7 @@ body {
 }
 
 .sidemenu-box{
-  @apply w-50 h-50
+  @apply w-50 h-min
 }
 
 .sidemenu-selection-items{
@@ -145,7 +157,7 @@ body {
 
 .sidemenu-selection-text{
   @apply w-full text-center max-md:hidden
-}
+} */
 
 /* side features */
 
