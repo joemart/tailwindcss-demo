@@ -5,13 +5,14 @@
 /.pnp
 .pnp.js
 
+
 # testing
 /coverage
-
+/.vscode
 # next.js
 /.next/
 /out/
-
+/src/pages/potato.tsx
 # production
 /build
 

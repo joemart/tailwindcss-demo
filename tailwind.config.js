@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx}',
@@ -46,9 +48,22 @@ module.exports = {
         'md' : '641px',
         'lg' : '1008px'
       },
+      transitionProperty: {
+        "top":"top",
+        'left': 'left',
+        
+      },
       
      
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function({addUtilities}){
+      addUtilities ({
+        '.animate-forwards' : {
+          'animation-fill-mode' : 'forwards'
+        }
+      })
+    })
+  ],
 }

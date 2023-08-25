@@ -1,9 +1,10 @@
 import { Listbox, ListboxItem } from "@nextui-org/listbox"
+import React from "react"
 
 let mySVGs2 = {
     Hero: <div key={"Hero"} className="sidemenu-section-icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="51" viewBox="0 0 50 51" fill="none">
-            <g clip-path="url(#clip0_271_27)">
+            <g clipPath="url(#clip0_271_27)">
                 <path d="M39.5833 6.5H10.4167C8.125 6.5 6.25 8.375 6.25 10.6667V39.8333C6.25 42.125 8.125 44 10.4167 44H39.5833C41.875 44 43.75 42.125 43.75 39.8333V10.6667C43.75 8.375 41.875 6.5 39.5833 6.5ZM29.1667 35.6667H14.5833V31.5H29.1667V35.6667ZM35.4167 27.3333H14.5833V23.1667H35.4167V27.3333ZM35.4167 19H14.5833V14.8333H35.4167V19Z" fill="#2E71AE" />
             </g>
             <defs>
@@ -37,10 +38,53 @@ let mySVGs2 = {
     </div>
 }
 
+
+
 export const MyListBoxItemComponent: any = () => {
-    return <Listbox className="sidemenu-container" selectionMode={"single"}>
-        {Object.entries(mySVGs2).map(([key, value]) => <ListboxItem aria-label={key} className="sidemenu-section" key={key} selectedIcon={value}>{key}</ListboxItem>)}
-    </Listbox>
+
+    const [selectedKeys, setSelectedKeys] = React.useState<any>(new Set(["Hero"]))
+
+    return <>
+        <div className={`w-[50px] h-[260px] `}>
+            <div
+                className={`sidemenu-arrow absolute duration-[300ms] transition-[top] 
+                    ${selectedKeys.has("Hero") ? ` top-[0]` :
+                        selectedKeys.has("SignUp") ? "top-[25%]" :
+                            selectedKeys.has("Contact") ? "top-[50%]" :
+                                selectedKeys.has("FAQ") ? "top-[75%]" : ""}`} >
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="65" viewBox="0 0 50 65" fill="none">
+                    <g filter="url(#filter0_d_271_24)">
+                        <path d="M15.8494 16.0624C15.8494 14.29 17.5181 13.0472 18.7079 13.9334L40.9256 30.4807C42.0127 31.2904 41.8818 33.3073 40.6841 34.1992L18.4665 50.7465C17.2689 51.6385 15.8494 50.7764 15.8494 49.157L15.8494 16.0624Z" fill="#EFF7FF" />
+                    </g>
+                    <defs>
+                        <filter id="filter0_d_271_24" x="6.84937" y="6.64029" width="41.8179" height="53.4649" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                            <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset dx="-1" dy="1" />
+                            <feGaussianBlur stdDeviation="4" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0.675 0 0 0 0 0.845238 0 0 0 0 1 0 0 0 1 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_271_24" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_271_24" result="shape" />
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <Listbox
+            className="sidemenu-container flex flex-col"
+            selectionMode={"single"}
+            aria-label="My Listbox"
+            disallowEmptySelection
+            selectedKeys={selectedKeys}
+            onSelectionChange={setSelectedKeys}
+        >
+            {Object.entries(mySVGs2).map(([key, value]) => <ListboxItem className={`sidemenu-section`} key={key} selectedIcon={value} >{key}</ListboxItem>)}
+        </Listbox>
+    </>
+
+
 }
 
 
