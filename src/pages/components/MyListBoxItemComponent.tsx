@@ -73,12 +73,13 @@ export const MyListBoxItemComponent: any = () => {
         </div>
 
         <Listbox
-            className="sidemenu-container flex flex-col"
+            className="sidemenu-container flex flex-col w-[auto]"
             selectionMode={"single"}
             aria-label="My Listbox"
             disallowEmptySelection
             selectedKeys={selectedKeys}
             onSelectionChange={setSelectedKeys}
+            itemClasses={{ title: ` max-md:hidden` }}
         >
             {Object.entries(mySVGs2).map(([key, value]) => <ListboxItem className={`sidemenu-section`} key={key} selectedIcon={value} >{key}</ListboxItem>)}
         </Listbox>

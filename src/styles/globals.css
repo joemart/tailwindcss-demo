@@ -114,7 +114,7 @@ body {
 /* sidemenu
  */
 .sidemenu{
-  @apply w-fit h-fit flex justify-center items-start fixed top-[64px] z-[1] max-md:w-[68px]
+  @apply w-fit h-fit flex justify-center items-start fixed top-[64px] z-[1]
 }
 
 .sidemenu-section{
@@ -125,39 +125,6 @@ body {
   @apply w-[50px] h-[50px] flex justify-center items-center
 }
 
-
-
-/* .arrow{
-  @apply border border-red-50
-}
-
-.sidemenu-selection{
-  @apply flex flex-col items-start gap-1 w-full
-}
-
-.sidemenu-selection > *{
-  @apply flex self-stretch items-center gap-6 
-}
-
-.sidemenu-selection svg {
-  @apply max-md:w-[25px] max-md:h-[25px]
-}
-
-.sidemenu-selection-arrow{
-  @apply max-md:w-[30px] max-md:h-[28px]
-}
-
-.sidemenu-box{
-  @apply w-50 h-min
-}
-
-.sidemenu-selection-items{
-  @apply flex flex-row justify-start items-center w-full gap-5
-}
-
-.sidemenu-selection-text{
-  @apply w-full text-center max-md:hidden
-} */
 
 /* side features */
 

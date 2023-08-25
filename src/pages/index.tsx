@@ -5,9 +5,9 @@ import MyListBoxItemComponent from "./components/MyListBoxItemComponent"
 
 export const Home: NextPage = function () {
 
-  let [burgerMenu, setBurgerMenu] = useState(true)
-  const isOpen = () => {
-    setBurgerMenu(!burgerMenu)
+  let [openBurger, setOpenBurger] = useState(false)
+  const isOpenHandle = () => {
+    setOpenBurger(!openBurger)
   }
 
   const NavBarItems = ({ hidden = false }: { hidden?: any }) => {
@@ -29,16 +29,16 @@ export const Home: NextPage = function () {
       <nav className="main-nav navbar-items-color">
         <div className="home-text">HOME</div>
         {/* <NavBarItems /> */}
-        {burgerMenu ? <NavBarItems hidden /> : <NavBarItems />}
-        <div onClick={isOpen} className="navbar-burger">
-          <svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 2H30" stroke="#89C0F2" strokeWidth="3" />
-            <path d="M0 11H30" stroke="#89C0F2" strokeWidth="3" />
-            <path d="M0 20H30" stroke="#89C0F2" strokeWidth="3" />
+        {openBurger ? <NavBarItems /> : <NavBarItems hidden />}
+        <div onClick={isOpenHandle} className="navbar-burger">
+          <svg width="30" height="30" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path className={`transition-[transform] duration-500 ${openBurger ? "translate-x-[5px] translate-y-[-5px] rotate-45" : " "} `} d="M0 2H30" stroke="#89C0F2" strokeWidth="3" />
+            <path className={`transition-[opacity] duration-500 ${openBurger ? "opacity-0" : ""}`} d="M0 11H30" stroke="#89C0F2" strokeWidth="3" />
+            <path className={`transition-[transform] duration-500 ${openBurger ? "translate-x-[-10px] translate-y-[5px] -rotate-45" : " "}`} d="M0 20H30" stroke="#89C0F2" strokeWidth="3" />
           </svg>
         </div>
       </nav>
-      <div className="main-background" onClick={() => setBurgerMenu(() => true)}>
+      <div className="main-background" onClick={() => setOpenBurger(false)}>
 
         <div className="lines-left">
 
