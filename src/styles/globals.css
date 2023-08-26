@@ -114,7 +114,7 @@ body {
 /* sidemenu
  */
 .sidemenu{
-  @apply w-fit h-fit flex justify-center items-start fixed top-[64px] z-[1]
+  @apply w-fit h-fit flex justify-center items-start fixed top-[30%] z-[1]
 }
 
 .sidemenu-section{
