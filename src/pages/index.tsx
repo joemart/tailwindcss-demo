@@ -1,11 +1,11 @@
 import { NextPage } from "next"
 import Link from "next/link"
 import { ReactNode, useState } from "react"
-import MyListBoxItemComponent from "./components/MyListBoxItemComponent"
+import MyListBoxItemComponent from "./components/misc/MyListBoxItemComponent"
 import Navbar from "./components/Navbar"
-import Layout from "./components/Layout"
+import Layout from "./components/misc/Layout"
 import Hero from "./components/Hero"
-import Background from "./components/Background"
+import Background from "./components/misc/Background"
 
 const Home = function () {
 
