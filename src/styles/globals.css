@@ -7,6 +7,9 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --features-background-color: #89C0F2;
+  --features-box-shadow: 19px 19px 22px 0px rgba(0, 0, 0, 0.25) inset;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,7 +32,7 @@ body {
 
 /* navbar */
 .main-nav{
-  @apply absolute w-full flex justify-between flex-row items-center pl-10 pr-10 h-64 text-3xl border-b-navbar whitespace-nowrap z-[1]; 
+  @apply fixed w-full flex justify-between flex-row items-center pl-10 pr-10 h-64 text-3xl border-b-navbar whitespace-nowrap z-[1]; 
 }
 
 .home-text{
@@ -60,11 +63,11 @@ body {
 
 /* background */
 .main-background{
-  @apply bg-gradient-radial w-screen h-screen ;
+  @apply fixed w-[100%] bg-gradient-radial h-screen ;
 }
 
 .main-image{
-  @apply bg-my-image absolute w-screen h-screen overflow-hidden;
+  @apply bg-my-image absolute h-screen;
 }
 
 /* lines */
@@ -76,7 +79,7 @@ body {
 .lines-left > *,
 .lines-right, 
 .lines-right > * {
-  @apply absolute
+  @apply fixed z-[1];
 }
 
 .lines-left1, 
@@ -104,7 +107,7 @@ body {
 /* body */
 
 .main-body{
-  @apply relative flex flex-row justify-between top-[225px] main-body-text  mx-auto md:h-[700px] max-md:flex-col max-md:justify-center max-md:items-center max-md:box-border max-md:px-[70px] max-md:top-[100px]
+  @apply relative flex flex-row justify-between top-[225px] main-body-text  mx-auto md:h-[700px] max-md:flex-col max-md:justify-center max-md:items-center max-md:box-border max-md:px-[70px] max-md:top-[100px] z-[1]
 }
 
 .main-body-text{
@@ -185,4 +188,14 @@ body {
 
 .center-content-arrow{
   @apply flex justify-center
+}
+
+/* features */
+
+.features-list{
+  @apply flex flex-row justify-around items-center h-[200px] px-[92px] py-[25px] text-[#000] text-center font-[Inter] text-[32px] font-normal whitespace-nowrap md:max-lg:text-[25px]
+}
+
+.features-list li{
+  @apply flex flex-row justify-around grow-[1]
 }

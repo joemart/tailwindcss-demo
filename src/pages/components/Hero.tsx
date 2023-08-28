@@ -1,4 +1,3 @@
-import MyListBoxItemComponent from "./misc/MyListBoxItemComponent"
 import Link from "next/link"
 
 const Hero = () => {

@@ -1,11 +1,10 @@
-import { NextPage } from "next"
-import Link from "next/link"
 import { ReactNode, useState } from "react"
-import MyListBoxItemComponent from "./components/misc/MyListBoxItemComponent"
-import Navbar from "./components/Navbar"
+import Navbar from "./components/misc/Navbar"
 import Layout from "./components/misc/Layout"
 import Hero from "./components/Hero"
 import Background from "./components/misc/Background"
+import Features from "./components/Features"
+
 
 const Home = function () {
 
@@ -14,12 +13,13 @@ const Home = function () {
 
   return (
     <>
-
       <Navbar openBurger={openBurger} setOpenBurger={setOpenBurger} />
-      <Background setOpenBurger={setOpenBurger}>
+      <Background setOpenBurger={setOpenBurger} />
+      <div className="h-screen">
         <Hero />
-        {/* Put rest of the code here */}
-      </Background>
+      </div>
+
+      <Features></Features>
     </>
   )
 }
