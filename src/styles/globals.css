@@ -67,7 +67,7 @@ body {
 }
 
 .main-image{
-  @apply bg-my-image absolute h-screen;
+  @apply bg-my-image bg-center bg-cover h-screen;
 }
 
 /* lines */
@@ -197,5 +197,5 @@ body {
 }
 
 .features-list li{
-  @apply flex flex-row justify-around grow-[1]
+  @apply flex flex-row items-center h-full justify-around grow-[1] basis-[515px] shrink-[1];
 }
