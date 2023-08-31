@@ -1,10 +1,11 @@
 import { ReactNode, useState } from "react"
 import Navbar from "./components/misc/Navbar"
 import Layout from "./components/misc/Layout"
-import Hero from "./components/Hero"
 import Background from "./components/misc/Background"
-import Features from "./components/Features"
 
+import Hero from "./components/Hero"
+import Features from "./components/Features"
+import SignUp from "./components/SignUp"
 
 const Home = function () {
 
@@ -15,11 +16,13 @@ const Home = function () {
     <>
       <Navbar openBurger={openBurger} setOpenBurger={setOpenBurger} />
       <Background setOpenBurger={setOpenBurger} />
-      <div className="h-screen">
+      {/* <div className="h-screen">
         <Hero />
       </div>
-
       <Features></Features>
+      <SignUp></SignUp> */}
+
+
     </>
   )
 }

@@ -7,29 +7,46 @@ import CustomLoader from "./loader/CustomLoader"
 
 const Features: NextPage = () => {
 
-
-    return <div className="max-md:hidden relative bg-[var(--features-background-color)] shadow-[shadow:var(--features-box-shadow)] z-[1]">
+    return <section className="max-md:hidden relative bg-[var(--features-background-color)] shadow-[shadow:var(--features-box-shadow)] z-[1]">
         <ul className="features-list">
             <li>
-                <div className=" relative w-full h-full min-w-[100px] max-w-[200px]">
+                <div className=" relative h-full shrink-0 w-[150px]">
                     <CustomLoader
                         src={food1}
                     />
-                    {/* <img alt="food1" src="/food1.jpg" /> */}
                 </div>
-
-                <div>FOOD</div>
+                <div className="w-full  h-full flex items-center justify-center">
+                    <span>
+                        FOOD
+                    </span>
+                </div>
             </li>
             <li>
-                <div>Image</div>
-                <div>SOME LIGHT??? IDK</div>
+                <div className=" relative  h-full shrink-0 w-[150px]">
+                    <CustomLoader
+                        src={food2}
+                    />
+                </div>
+                <div className="w-full h-full flex items-center justify-center" >
+                    <span>
+                        SOME LIGHT??? IDK
+                    </span>
+                </div>
             </li>
             <li>
-                <div>Image</div>
-                <div>MORE FOOD!!!</div>
+                <div className=" relative shrink-0 w-[150px] h-full ">
+                    <CustomLoader
+                        src={food3}
+                    />
+                </div>
+                <div className="w-full h-full flex items-center justify-center">
+                    <span >
+                        MORE FOOD!!!
+                    </span>
+                </div>
             </li>
         </ul>
-    </div>
+    </section>
 
 
 

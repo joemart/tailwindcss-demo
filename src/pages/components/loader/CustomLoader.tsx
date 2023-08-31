@@ -15,14 +15,16 @@ const MyImageLoader: ImageLoader = ({ src }) => {
 
 const MyCustomLoader: MyCustomLoaderType = (props) => {
     return <Image
+
         loader={MyImageLoader}
         alt="Custom loader"
         {...props}
-        quality={75}
         sizes="100vw"
-        fill
         unoptimized
-        className=" object-cover"
+        // width={150}
+        // height={150}
+        fill
+        className=" rounded-[50%] "
     />
 }
 

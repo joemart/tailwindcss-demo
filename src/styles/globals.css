@@ -9,7 +9,9 @@
   --background-end-rgb: 255, 255, 255;
   --features-background-color: #89C0F2;
   --features-box-shadow: 19px 19px 22px 0px rgba(0, 0, 0, 0.25) inset;
-
+  --sign-up-box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.49);
+  --sign-up-radial-gradient: radial-gradient(37.80% 37.80% at 50.00% 50.00%, #89C0F2 0%, rgba(78, 166, 245, 0.62) 100%);
+  --sign-up-linear-gradient: linear-gradient(90deg, #2E71AE 1.38%, #89C0F2 98.98%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -193,9 +195,9 @@ body {
 /* features */
 
 .features-list{
-  @apply flex flex-row justify-around items-center h-[200px] px-[92px] py-[25px] text-[#000] text-center font-[Inter] text-[32px] font-normal whitespace-nowrap md:max-lg:text-[25px]
+  @apply flex flex-row justify-around items-center h-[200px] px-[92px] py-[25px] text-[#000] text-center font-[Inter] text-[32px] font-normal md:max-lg:text-[25px]
 }
 
 .features-list li{
-  @apply flex flex-row items-center h-full justify-around grow-[1] basis-[515px] shrink-[1];
+  @apply flex flex-row items-center h-full justify-between flex-1;
 }

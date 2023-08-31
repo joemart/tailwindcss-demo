@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 const Hero = () => {
-    return <div className="main-body">
+    return <section className="main-body">
 
         <div className=" max-md:hidden grow-[1] md:basis-[30%]">
 
@@ -78,7 +78,7 @@ const Hero = () => {
                 <span className="side-features-text">No extra fees</span>
             </div>
         </div>
-    </div>
+    </section>
 }
 
 export default Hero
