@@ -2,10 +2,9 @@ import React from "react"
 import Link from "next/link"
 
 export default function SignUp() {
-    return <section className="h-full relative flex justify-center items-center ">
-
-        <div className="absolute rounded-[50%] blur-[92px] w-[1000px] h-[1000px] bg-[image:var(--sign-up-radial-gradient)]"></div>
-        <div className="w-[595px]  h-[740px] bg-white rounded-[10px] shadow-[shadow:var(--sign-up-box-shadow)] flex justify-center items-center z-[1]">
+    return <section className="h-screen overflow-hidden relative flex justify-center items-center ">
+        <div className="absolute w-[50%] h-[90%] rounded-[50%] blur-[92px] bg-[image:var(--sign-up-radial-gradient)]"></div>
+        <div className="max-md:w-[350px] max-md:h-[650px] p-[10px] w-[595px] h-[740px] bg-white rounded-[10px] shadow-[shadow:var(--sign-up-box-shadow)] flex justify-center items-center z-[1]">
             <form className="w-[415px] h-[650px] flex flex-col justify-center gap-[40px] text-[#000]" action="" method="get" >
                 <div className="flex justify-center items-center self-stretch text-[31px] font-semibold py-[6px] border-b-[1px] border-solid border-[#000]/50">Sign Up</div>
                 <fieldset className="flex flex-col gap-[40px] text-[#000]/50 text-[20px] font-semibold">
@@ -59,5 +58,4 @@ export default function SignUp() {
             </form>
         </div>
     </section>
-
 }

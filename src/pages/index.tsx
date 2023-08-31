@@ -6,6 +6,7 @@ import Background from "./components/misc/Background"
 import Hero from "./components/Hero"
 import Features from "./components/Features"
 import SignUp from "./components/SignUp"
+import ContactUs from "./components/ContactUs"
 
 const Home = function () {
 
@@ -18,10 +19,10 @@ const Home = function () {
       <Background setOpenBurger={setOpenBurger} />
       {/* <div className="h-screen">
         <Hero />
-      </div>
-      <Features></Features>
-      <SignUp></SignUp> */}
-
+      </div> */}
+      {/* <Features></Features> */}
+      <SignUp></SignUp>
+      {/* <ContactUs></ContactUs> */}
 
     </>
   )

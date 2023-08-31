@@ -109,7 +109,7 @@ body {
 /* body */
 
 .main-body{
-  @apply relative flex flex-row justify-between top-[225px] main-body-text  mx-auto md:h-[700px] max-md:flex-col max-md:justify-center max-md:items-center max-md:box-border max-md:px-[70px] max-md:top-[100px] z-[1]
+  @apply relative h-screen flex flex-row justify-between top-[225px] main-body-text  mx-auto md:h-[700px] max-md:flex-col max-md:justify-center max-md:items-center max-md:box-border max-md:px-[70px] max-md:h-[88vh] max-md:top-[100px] z-[1]
 }
 
 .main-body-text{
