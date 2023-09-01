@@ -7,11 +7,15 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  
+  --navbar-background-color: #2E71AE;
   --features-background-color: #89C0F2;
   --features-box-shadow: 19px 19px 22px 0px rgba(0, 0, 0, 0.25) inset;
   --sign-up-box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.49);
   --sign-up-radial-gradient: radial-gradient(37.80% 37.80% at 50.00% 50.00%, #89C0F2 0%, rgba(78, 166, 245, 0.62) 100%);
   --sign-up-linear-gradient: linear-gradient(90deg, #2E71AE 1.38%, #89C0F2 98.98%);
+  
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,7 +38,7 @@ body {
 
 /* navbar */
 .main-nav{
-  @apply fixed w-full flex justify-between flex-row items-center pl-10 pr-10 h-64 text-3xl border-b-navbar whitespace-nowrap z-[1]; 
+  @apply fixed w-full flex justify-between flex-row items-center pl-10 pr-10 h-64 text-3xl border-b-navbar whitespace-nowrap z-[2] bg-[var(--navbar-background-color)]; 
 }
 
 .home-text{
@@ -50,7 +54,7 @@ body {
 }
 
 .navbar-items-container{
-  @apply max-md:bg-[#274C6D] max-md:fixed max-md:right-0 max-md:top-[65px] z-[1]
+  @apply max-md:bg-[var(--navbar-background-color)] max-md:fixed max-md:right-0 max-md:top-[65px] z-[1]
 }
 
 .navbar-items-mobile{
@@ -145,7 +149,7 @@ body {
 /* center content */
 
 .center-content{
-  @apply h-full flex flex-col whitespace-normal justify-between items-center max-md:h-[688px]
+  @apply h-full flex flex-col whitespace-normal justify-between items-center max-md:h-[688px] max-md:justify-normal max-md:gap-[10px]
 }
 
 .center-content-title{
@@ -161,7 +165,7 @@ body {
 }
 
 .center-content-text-container{
-  @apply flex flex-col justify-between h-[475px] items-center
+  @apply flex flex-col justify-between h-[50vh] items-center
 }
 
 .center-content-container{

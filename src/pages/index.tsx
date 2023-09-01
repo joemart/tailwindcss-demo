@@ -17,12 +17,12 @@ const Home = function () {
     <>
       <Navbar openBurger={openBurger} setOpenBurger={setOpenBurger} />
       <Background setOpenBurger={setOpenBurger} />
-      {/* <div className="h-screen">
+      <div className="h-screen">
         <Hero />
-      </div> */}
-      {/* <Features></Features> */}
+      </div>
+      <Features></Features>
       <SignUp></SignUp>
-      {/* <ContactUs></ContactUs> */}
+      <ContactUs></ContactUs>
 
     </>
   )

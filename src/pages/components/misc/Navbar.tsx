@@ -23,7 +23,7 @@ export const Navbar = ({ openBurger, setOpenBurger }: NavbarProps): React.ReactN
         </>
     }
 
-    return <nav className="main-nav navbar-items-color">
+    return <nav className="main-nav navbar-items-color ">
         <div className="home-text">HOME</div>
         {/* <NavBarItems /> */}
         {openBurger ? <NavBarItems /> : <NavBarItems hidden />}
