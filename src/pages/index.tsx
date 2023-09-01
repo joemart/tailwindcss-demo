@@ -24,6 +24,8 @@ const Home = function () {
       <Features />
       <SignUp />
       <ContactUs />
+      <br />
+      <br />
       <FAQ />
     </>
   )
