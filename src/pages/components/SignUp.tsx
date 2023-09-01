@@ -2,7 +2,7 @@ import React from "react"
 import Link from "next/link"
 
 export default function SignUp() {
-    return <section className="h-screen overflow-hidden relative flex justify-center items-center ">
+    return <section id="SignUp" className="h-screen overflow-hidden relative flex justify-center items-center ">
         <div className="absolute w-[50%] h-[90%] rounded-[50%] blur-[92px] bg-[image:var(--sign-up-radial-gradient)]"></div>
         <div className="max-md:w-[350px] max-md:h-[650px] p-[10px] w-[595px] h-[740px] bg-white rounded-[10px] shadow-[shadow:var(--sign-up-box-shadow)] flex justify-center items-center z-[1]">
             <form className="w-[415px] h-[650px] flex flex-col justify-center gap-[40px] text-[#000]" action="" method="get" >

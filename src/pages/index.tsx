@@ -7,6 +7,7 @@ import Hero from "./components/Hero"
 import Features from "./components/Features"
 import SignUp from "./components/SignUp"
 import ContactUs from "./components/ContactUs"
+import FAQ from "./components/FAQ"
 
 const Home = function () {
 
@@ -17,13 +18,13 @@ const Home = function () {
     <>
       <Navbar openBurger={openBurger} setOpenBurger={setOpenBurger} />
       <Background setOpenBurger={setOpenBurger} />
-      <div className="h-screen">
+      <div id="Hero" className="h-screen">
         <Hero />
       </div>
-      <Features></Features>
-      <SignUp></SignUp>
-      <ContactUs></ContactUs>
-
+      <Features />
+      <SignUp />
+      <ContactUs />
+      <FAQ />
     </>
   )
 }

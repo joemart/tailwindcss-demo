@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 export default function ContactUs() {
-    return <section className="flex justify-center items-center relative h-screen max-md:h-fit z-[1]">
+    return <section id="Contact" className="flex justify-center items-center relative h-screen max-md:h-fit z-[1]">
         <div className="w-[1334px] justify-between flex items-center max-md:flex-col">
             <div className="w-[370px] h-[405px] flex flex-col p-[10px] justify-between items-center shrink-0">
                 <svg xmlns="http://www.w3.org/2000/svg" width="81" height="80" viewBox="0 0 81 80" fill="none">

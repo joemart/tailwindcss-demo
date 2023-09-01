@@ -1,5 +1,6 @@
 import { Listbox, ListboxItem } from "@nextui-org/listbox"
 import React from "react"
+import { useRouter } from "next/router"
 
 let mySVGs2 = {
     Hero: <div key={"Hero"} className="sidemenu-section-icon">
@@ -43,6 +44,7 @@ let mySVGs2 = {
 export const MyListBoxItemComponent: any = () => {
 
     const [selectedKeys, setSelectedKeys] = React.useState<any>(new Set(["Hero"]))
+    const router = useRouter()
 
     return <>
         <div className={`w-[50px] h-[260px] `}>
@@ -80,8 +82,12 @@ export const MyListBoxItemComponent: any = () => {
             selectedKeys={selectedKeys}
             onSelectionChange={setSelectedKeys}
             itemClasses={{ title: ` max-md:hidden` }}
+
         >
-            {Object.entries(mySVGs2).map(([key, value]) => <ListboxItem className={`sidemenu-section`} key={key} selectedIcon={value} >{key}</ListboxItem>)}
+            {Object.entries(mySVGs2).map(([key, value]) => <ListboxItem
+                onClick={() => router.push(`/#${key}`)}
+                className={`sidemenu-section`}
+                key={key} selectedIcon={value} >{key}</ListboxItem>)}
         </Listbox>
     </>
 
