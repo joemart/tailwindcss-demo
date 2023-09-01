@@ -2,7 +2,7 @@ import MyListBoxItemComponent from "./MyListBoxItemComponent"
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
 
-    return <main className="main-image">
+    return <main className="main-image font-[Inter]">
         <div className="lines-left">
 
             <svg xmlns="http://www.w3.org/2000/svg" width="386" height="599" viewBox="0 0 386 599" fill="none">
